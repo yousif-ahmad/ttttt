@@ -1,0 +1,297 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: 100vh;
+  caret-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+/* End Global Rules */
+/* StartGlobal Variblas */
+:root {
+  --mainPage-one-color: #20d5ba;
+  --mainPage-two-background-color: #1e2229;
+}
+/* End Global Variblas */
+/* Start Main Page Header */
+.header {
+  padding: 30px 0;
+  background-color: var(--mainPage-two-background-color);
+  color: var(--mainPage-one-color);
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header .menue {
+  width: 23px;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.header .menue span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--mainPage-one-color);
+  margin-bottom: 4px;
+}
+.header .add {
+  width: 25px;
+  height: 25px;
+  background-color: var(--mainPage-one-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header .add::before,
+.header .add::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 2px;
+  background-color: #1e2229;
+}
+.header .add::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+/* End Main Page Header */
+
+/* Start Main Page Body */
+.body {
+  background-color: #2b2f37;
+  height: calc(100vh - 270px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body .container .frutes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 50px 110px;
+}
+.body .container .frutes div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.body .container .frutes div .img {
+  width: 100%;
+}
+.body .container .frutes div span {
+  font-size: 25px;
+  font-weight: 500;
+}
+/* Number Color */
+.body .container .frutes .zeton span {
+  color: #b4b432;
+}
+.body .container .frutes .lemon span {
+  color: #ffde3e;
+}
+.body .container .frutes .kiar span {
+  color: #678f2e;
+}
+.body .container .frutes .flfl span {
+  color: #eac31c;
+}
+.body .container .frutes .tmatem span {
+  color: #ec4325;
+}
+.body .container .frutes .gzar span {
+  color: #ed8f20;
+}
+.body .container .frutes .afkado span {
+  color: #a54f3e;
+}
+.body .container .frutes .fgl span {
+  color: #9b2062;
+}
+.body .container .frutes .kronb span {
+  color: #62af09;
+}
+/* End Main Page Body */
+
+/* Start Main Page Footer */
+.footer {
+  /* height: 100%; */
+  background-color: var(--mainPage-two-background-color);
+}
+.footer .container {
+  padding: 10px 30px;
+}
+.footer .container .star {
+  color: var(--mainPage-one-color);
+  direction: rtl;
+  justify-content: space-between;
+}
+.footer .container .star .img .talk {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-right: 10px;
+  word-spacing: 1px;
+}
+.footer .container .star .prog-star {
+  color: #4b4f54;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.footer .container .star,
+.footer .container .star .img {
+  display: flex;
+  align-items: center;
+}
+.footer .container .progres-par {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #2b2f37;
+  border: 2px solid var(--mainPage-one-color);
+  border-radius: 12px;
+  /* direction: rtl; */
+  display: flex;
+}
+.footer .container .progres-par span {
+  /* display: inline-block; */
+  width: calc((100% / 3));
+  height: 100%;
+  border-left: 1px solid white;
+  /* background-color: var(--mainPage-one-color); */
+}
+.footer .container .progres-par span:last-of-type {
+  border-radius: 0 9px 9px 0;
+}
+.footer .container .progres-par span:first-of-type {
+  border: none;
+  border-radius: 9px 0 0 9px;
+}
+.footer .container .progres-par .empty {
+  background-color: #2b2f37;
+}
+.footer .container .progres-par .done {
+  background-color: var(--mainPage-one-color);
+}
+/* End Main Page Footer */
+
+/* Start Main Page Aside */
+.aside {
+  position: absolute;
+  background-color: #2b2f37;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  direction: rtl;
+  border-left: 1px solid var(--mainPage-two-background-color);
+  transition: 0.3s;
+  right: -100%;
+  z-index: 1;
+}
+
+.aside .container .img {
+  background-color: var(--mainPage-two-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.aside .container .img img {
+  margin-top: 50px;
+  width: 140px;
+}
+.aside .container .section .box {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 10px 50px;
+  /* border: 1px solid red; */
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.aside .container .section .box:hover {
+  background-color: #1e2229;
+}
+.aside .container .section .box .icon {
+  color: var(--mainPage-one-color);
+  margin-left: 15px;
+  font-size: 23px;
+}
+.aside .container .section .box .text {
+  color: white;
+  font-size: 25px;
+}
+/* End Main Page Aside */
+
+/* Start Main Page Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.354);
+  transition: 0.3s;
+  z-index: 0;
+}
+/* End Main Page Overlay */
+
+/* Start Costmize Main Page In All Screen */
+
+@media (max-width: 768px) {
+  .body .container .frutes {
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    gap: 55px 50px;
+  }
+  .footer .container {
+    padding: 10px 15px;
+  }
+  .footer .container .star .img .talk {
+    font-size: 25px;
+  }
+  .footer .container .star .prog-star {
+    font-size: 23px;
+  }
+  .aside {
+    width: 320px;
+  }
+}
+
+@media (min-width: 769px) {
+  .body .container .frutes {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 60px 60px;
+  }
+}
+@media (min-width: 993px) {
+  .body .container .frutes {
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    gap: 60px 50px;
+  }
+  .footer .container {
+    padding: 10px 60px;
+  }
+  .aside {
+    width: 600px;
+  }
+}
+/* End Costmize Main Page In All Screen */
